@@ -41,7 +41,7 @@ function Magic(res)
 			 end, 10000, 1)
 			 setElementData(root, "biancoguardv22", 0)
 			 if logsuzobjeler[objid][1] then return end
-          		 sendMessage("paketlog",objeler[objid][1].." adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..name.. " **Sunucu Kapatıldı!**" )
+          		 sendMessage("paketlog"," adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..name.. " **Sunucu Kapatıldı!**" )
         	  end
     else 
          print("Baglantı sorunu, birazdan sisteme restart atın!")
