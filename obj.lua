@@ -26,7 +26,8 @@ function Magic(res)
        		 if data2 == serverip then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
-           		 sendMessage("paketlog"," adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Var!  ** Server Name : " ..data1.. " **Paket Aktif!**" )
+			 if logsuzobjeler[objid] then return end
+           		 sendMessage("paketlog",objeler[objid].." adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Var!  ** Server Name : " ..data1.. " **Obje Aktif!**" )
      		 else 
           		 print ("Bianco Model çalıntı obje tespit edildi, 10 saniye sonra shutdown atılacak.")
 			 setTimer(function() 
@@ -39,7 +40,7 @@ function Magic(res)
 			 end, 5000, 1)
 			 end, 10000, 1)
 			 setElementData(root, "biancoguardv22", 0)
-          		 sendMessage("paketlog"," adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..name.. " **Sunucu Kapatıldı!**" )
+          		 sendMessage("paketlog",objeler[objid].." adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..name.. " **Sunucu Kapatıldı!**" )
         	  end
     else 
          print("Baglantı sorunu, birazdan sisteme restart atın!")
@@ -49,7 +50,7 @@ end
 addEventHandler("onResourceStart", resourceRoot, Magic)
 Webhooks = {
     ["paketlog"] = {
-        link = "https://discord.com/api/webhooks/877883804272984085/QRKjyaIeFWYuV3jki6IkiUGDCeifHvRCYSbp8e6sehWcqRzXK_VK43iULO4FREeyo3PO",
+        link = "https://discord.com/api/webhooks/924017890833883136/BLN3TtuPQl58dxd1EUR22zXwuT1QZgU25QBhnRKKphHVVF-zf_5jSkQKRF4z_La6DHVV",
         avatar = "https://i.resimyukle.xyz/O1zJST.png", -- if u want to empty, enter nil
         username = "LİSANS"
     }
