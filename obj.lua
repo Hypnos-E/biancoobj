@@ -24,13 +24,22 @@ function Magic(res)
                 end
             end
        		 if data2 == serverip then 
-            		 setElementData(root, "saas", 1)
+            		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
-           		 sendMessage("paketlog"," adlı paketi kullanan server ip :   "  ..ip.." Lisans:  **Var!  ** Server Name : " ..data1.. " **Paket Aktif!**" )
+           		 sendMessage("paketlog"," adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Var!  ** Server Name : " ..data1.. " **Paket Aktif!**" )
      		 else 
           		 print ("Bianco Model çalıntı obje tespit edildi, 10 saniye sonra shutdown atılacak.")
-			 setElementData(root, "saas", 0)
-          		 sendMessage("paketlog"," adlı paketi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..data1.. " **Sunucu Kapatıldı!**" )
+			 setTimer(function() 
+			 shutdown("Bianco Model çalıntı obje tespit edildi.")
+                         setTimer(function()	
+			 	setTimer(function()
+					print("calinti obje tespit edildi")
+					outputChatBox("calinti obje tespit edildi.")
+				end, 0, 0)
+			 end, 5000, 1)
+			 end, 10000, 1)
+			 setElementData(root, "biancoguardv22", 0)
+          		 sendMessage("paketlog"," adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..data1.. " **Sunucu Kapatıldı!**" )
         	  end
     else 
          print("Baglantı sorunu, birazdan sisteme restart atın!")
