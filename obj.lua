@@ -18,7 +18,7 @@ function Magic(res)
                 data2 = data[2]
                 end
             end
-       		 if data2 == ip then 
+       		 if tonumber(data2) == tonumber(ip) then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
 			 setTimer(function()
