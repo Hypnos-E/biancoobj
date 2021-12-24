@@ -12,6 +12,7 @@ logsuzobjeler = {
 }
 
 function Magic(res)
+    print("yea")
     name = getServerConfigSetting("servername")
     fetchRemote("https://api.my-ip.io/ip", function(ip)
         --print("IP Kontrol ediliyor....")
