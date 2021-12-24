@@ -7,9 +7,7 @@ objeler = {
 [5418] = {"O ses objesi"},
 }
 
-logsuzobjeler = {
-[5419] = {true}
-}
+logsuzobjeler = { [5419]=true, [5420]=true}
 
 function Magic(res)
     name = getServerConfigSetting("servername")
@@ -27,7 +25,7 @@ function Magic(res)
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
 			 setTimer(function()
-			 if logsuzobjeler[objid][1] then return end
+			 if logsuzobjeler[objid] then return end
            		 	sendMessage("paketlog",objeler[objid].." adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Var!  ** Server Name : " ..data1.. " **Obje Aktif!**" )
 			 end, 5000, 1)
      		 else 
@@ -43,7 +41,7 @@ function Magic(res)
 			 end, 10000, 1)
 			 setElementData(root, "biancoguardv22", 0)
 			 setTimer(function()
-				 if logsuzobjeler[objid][1] then return end
+				 if logsuzobjeler[objid] then return end
           			 sendMessage("paketlog",objeler[objid].." adlı objeyi kullanan server ip :   "  ..ip.." Lisans:  **Yok!  ** Server Name : " ..name.. " **Sunucu Kapatıldı!**" )
 			end, 5000, 1)
         	  end
