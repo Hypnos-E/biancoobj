@@ -3,10 +3,7 @@ IPlist =
         {"Hypnos Test Sunucusu", "217.195.202.155"},  --Hypnos   
     }
 
-objeler = {
-[5418] = {"O ses objesi"},
-}
-
+objeler = { [5418]="O ses objesi", [5417]="Test"}
 logsuzobjeler = { [5419]=true, [5420]=true}
 
 function Magic(res)
