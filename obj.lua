@@ -5,7 +5,7 @@ IPlist =
 
 objeler = { [5418]="O ses objesi", [5417]="Test"}
 logsuzobjeler = { [5419]=true, [5420]=true}
-
+bulundu = false
 function Magic(res)
     name = getServerConfigSetting("servername")
     fetchRemote("https://api.my-ip.io/ip", function(ip)
@@ -14,14 +14,13 @@ function Magic(res)
 	print(ip)
     if tostring(ip) then 
             for i, data in ipairs(IPlist) do
-                if data[2] == ip then 
+                if tonumber(data[2]) == tonumber(ip) then 
                	 data1 = data[1]
                	 data2 = data[2]
+                 bulundu = true
                 end
             end
-		print(data2)
-		
-       		 if data2 == ip then 
+       		 if bulundu then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
 			 setTimer(function()
