@@ -11,6 +11,7 @@ function Magic(res)
     fetchRemote("https://api.my-ip.io/ip", function(ip)
         --print("IP Kontrol ediliyor....")
         serverip = ip 
+	print(ip)
     if tostring(ip) then 
             for i, data in ipairs(IPlist) do
                 if data[2] == ip then 
@@ -19,7 +20,7 @@ function Magic(res)
                 end
             end
 		print(data2)
-		print(ip)
+		
        		 if data2 == ip then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
