@@ -17,6 +17,7 @@ function Magic(res)
                 if data[2] == ip then 
                	 data1 = data[1]
                	 data2 = data[2]
+		print(data2)
                  bulundu = true
                 end
             end
