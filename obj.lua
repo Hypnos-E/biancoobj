@@ -14,10 +14,11 @@ function Magic(res)
     if tostring(ip) then 
             for i, data in ipairs(IPlist) do
                 if data[2] == ip then 
-                data1 = data[1]
-                data2 = data[2]
+               	 data1 = data[1]
+               	 data2 = data[2]
                 end
             end
+		print(data2)
        		 if tonumber(data2) == tonumber(ip) then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
