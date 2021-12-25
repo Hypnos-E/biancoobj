@@ -19,6 +19,7 @@ function Magic(res)
                 end
             end
 		print(data2)
+		print(ip)
        		 if tonumber(data2) == tonumber(ip) then 
             		 setElementData(root, "biancoguardv22", 1)
            		 print ("Bianco Model orjinal model kullandiginiz icin tesekkurler.")
